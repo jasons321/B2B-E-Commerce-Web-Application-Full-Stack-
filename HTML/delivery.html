@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Menu</title>
+  <script src="/js/delivery.js"></script>
+  <link rel="stylesheet" href="/css/delivery.css">
+  <script src="/js/client.js"></script>
+  <link rel="stylesheet" href="/css/client.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="header" colspan="2">
+    <div id="header-left">
+      <img class="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+    </div>
+    <div class="header-right">
+      <a class="active" onclick="home();" href="#home">Home</a>
+      <a onclick="logOut();">Logout</a>
+      <a><i onclick="goCart();" id="cart" class='bx bx-cart'></i></a>
+    </div>
+  </div>
+  <div class="maincontent">
+    <div class="filtermenu">
+        <div class="allfilters"> Status <select onchange="filterByStatus()" id="status">
+            <option value=""> </option>
+            <option value="Payment Uploaded">Payment Uploaded</option>
+            <option value="Waiting Payment">Waiting Payment</option>
+            <option value="Delivering">Delivering</option>
+            <option value="Waiting Approval">Waiting Approval</option>
+          </select>
+          Total Amount <select onchange="sortByAmount()" id="amount">
+            <option value=""> </option>
+            <option value="Ascending">Ascending </option>
+            <option value="Descending">Descending</option>
+          </select>
+          Date <select onchange="sortByDate()"id="date">
+            <option value="1"> </option>
+            <option value="Recent">Recent </option>
+            <option value="Latest">Latest</option>
+          </select>
+        </div>
+    </div>
+    <div class="tablecontainer">
+
+      <table id="tables">
+        <tr id="header">
+          <th id="first">
+            TransactionID
+          </th>
+          <th id="column">
+            Status
+          </th>
+          <th id="column">
+            Total Amount
+          </th>
+          <th id="column">
+            Order Date
+          </th>
+          <th id="last">
+          </th>
+        </tr>
+      </table>
+    </div>
+
+  <div class="modal-container">
+    <div class="actualModal">
+      <h1>Transacton Details</h1>
+      <div class="transcdet">
+        <div id="transcID">
+        </div>
+        <div id="ordered">
+        </div>
+        <div id="orderStatus">
+        </div>
+      </div>
+      <table id="table-list">
+        <tr id="header">
+          <th id="first-list">
+            Product
+          </th>
+          <th id="column">
+            Category
+          </th>
+          <th colspan="2" id="last-list">
+            Quantity
+          </th>
+        </tr>
+      </table>
+      <div id="retbutton" onclick="back();"> Return</div>
+    </div>
+  </div>
+<div class="modal-container-upload">
+    <div class="actualModal-upload">
+      <div onclick="uploadImage()" class="uploadbutton"> Upload</div>
+      <input type="file" id="myFile" accept="image/*" name="profile-files">
+      <div id="retbutton" onclick="closeUpload();"> Return</div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

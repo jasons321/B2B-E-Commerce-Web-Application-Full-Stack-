@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <script src="/js/admin.js"></script>
+    <script src="/js/transactionsa.js"></script>
+    <link rel="stylesheet" href="/css/transactionsa.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div id="header">
+    <img id="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+    <i class='bx bx-menu' onclick="openSidebar();" id="iconmenu"></i>
+
+
+</div>
+<div class="sidebar">
+    <ul id="dashboardlist" style="list-style-type:none">
+        <li class="lists" onclick="orders();">
+            <i class='bx bxs-dashboard' ></i> Dashboard
+        </li>
+        <li class="lists" onclick="orders();">
+            <i class='bx bx-cart'></i>
+            Orders
+        </li>
+        <li class="lists" onclick="users();">
+            <i class='bx bx-user'></i> Users
+
+        </li>
+        <li class="lists" onclick="transactions();">
+            <i class='bx bx-wallet-alt'></i> Transactions
+
+        <li class="lists" onclick="catalogue();">
+            <i class='bx bx-package'></i> Catalogue
+        </li>
+        <li class="lists" onclick="logOut();">
+            <i class='bx bx-log-out'></i> Logout
+        </li>
+    </ul>
+
+</div>
+
+    <div class="maincontent">
+        
+        <div class="pending"> 
+            <div class="filtermenu">
+              <div class="allfilters"> 
+                Total Value <select onchange="sortByAmount()" id="amount">
+                  <option value=""> </option>
+                  <option value="Ascending">Ascending </option>
+                  <option value="Descending">Descending</option>
+                </select>
+
+                Filter by User ID
+                <input onkeyup="filterListByUserId()" id="userid" type="number"> 
+              </div>
+          </div>
+            <table id="maintable">
+                <tr id="tableheader">
+                    <th id="first">
+                    Transaction ID
+                </th>
+                <th id="column">
+                  Status 
+              </th>
+                <th id="column">
+                  Proof of Payment
+                </th>
+                <th id="column">
+                  User ID
+                </th>
+                <th id="column">
+                  Total Value
+                </th>
+                <th id="last">
+                </th>
+              </tr>       
+              </table>
+        </div>
+        <div class="create-form">
+            <div class="actual-form-create">
+                <div class="create-form-header">
+                    Proof of Payment
+                </div>
+                <div id="proofofpayement"> 
+
+                </div>
+                <div class="cancelbutton" onclick="removeAll()"> Cancel</div>
+
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="actualModal">
+              <h1>Transaction Details</h1>
+              <div class="transcdet">
+                <div id="transcID">
+                </div>
+                <div id="ordered">
+                </div>
+                <div id="status">
+                </div>
+              </div>
+              <div class="tablecontainer"> 
+                <table id="table-list">
+                    <tr id="tableheader">
+                      <th id="first">
+                        Product
+                      </th>
+                      <th id="column">
+                        Category
+                      </th>
+                      <th id="last">
+                        Quantity
+                      </th>
+    
+                    </tr>
+                  </table>
+              </div>
+
+              <div id="retbutton" onclick="closeTransaction();"> Return</div>
+            </div>
+          </div>
+</div>
+
+</body>
+
+</html>

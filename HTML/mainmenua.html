@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/mainmenua.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/mainmenua.css">
+    <link rel="stylesheet" href="/css/admin.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    </head>
+<body>
+    <div id="header"> 
+        <img id="logo" src = "/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+            <i class='bx bx-menu' onclick="openSidebar();" id ="iconmenu" ></i>
+        
+    </div>
+
+    
+    <div class= "sidebar">
+       
+        <ul id = "dashboardlist" style="list-style-type:none">
+            <li class="lists">
+                <i class='bx bxs-dashboard' ></i> Dashboard
+            </li>
+            <li class="lists" onclick="orders();">
+                <i class='bx bx-cart'></i>
+                Orders
+            </li>
+            <li class="lists" onclick="users();">
+                <i class='bx bx-user' ></i> Users
+
+            </li>
+            <li class="lists" onclick="transactions();">
+                <i class='bx bx-wallet-alt' ></i> Transactions
+            
+            <li class="lists" onclick="catalogue();"> 
+                <i class='bx bx-package' ></i> Catalogue
+            </li>
+            <li class="lists" onclick="logOut();">
+                <i class='bx bx-log-out'  ></i>  Logout
+            </li>
+         </ul>
+         <div class="profile"> 
+            profile 
+         </div>
+    </div>
+    <div class="maincontent">
+        <div class="dashboard">
+            <div id ="statheader"> 
+                <div id="customers"> 
+                    <ul id = "customers-list" style="list-style-type:none"> 
+                            <li><i class='bx bx-user' ></i>Customers </li>
+                    </ul>
+                   
+                </div>
+                <div id="products">
+                    <ul id = "products-list" style="list-style-type:none"> 
+                        <i class='bx bx-package' ></i> Catalogue 
+                </ul>
+                    
+                </div>
+                <div id="transactions">
+                    <ul id = "transactions-list" style="list-style-type:none"> 
+                        <i class='bx bx-wallet-alt' ></i> Transactions
+
+                </ul>
+
+                </div>
+            </div> 
+
+        <div class="tables"> 
+            <div id="topcustomers" > 
+                <table  id="maintable-customers" >
+                    <tr id="tableheader">
+                      <th id="column">
+                       ID
+                      </th>
+                      <th id="column">
+                        User
+                       </th>
+                      <th id="column">
+                        Total Sales
+                    </th>
+
+                    </tr>        
+                  </table>
+            </div>
+            <div id = "topproducts"> 
+                <canvas id="chartproducts" ></canvas>
+            </div>
+        </div>
+            <div id ="graph">             
+                <div class="zoom" onclick ="changeRevenue(this)"> <i class='bx bx-search-alt-2'></i> Zoom</div>
+                <canvas class="charts" id="chartrevenue"></canvas>
+                <div  class = "zoom" onclick ="changeSales(this)"> <i class='bx bx-search-alt-2'></i> Zoom</div>
+
+                <canvas class="charts" id="chartsales"></canvas>
+
+            </div> 
+
+        </div>
+    </div>
+</body>
+</html>

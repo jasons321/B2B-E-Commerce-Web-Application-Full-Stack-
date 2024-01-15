@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics</title>
+    <script src="/js/mainl.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/mainl.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="header"> 
+        <img id="logo" src = "/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+
+        
+    </div>
+    <div class="maincontent">
+
+        <table id="maintable-log">
+            <tr id="tableheader">
+              <th id="first">
+                Transaction ID
+              </th>
+              <th id="column">
+                Name 
+            </th>
+              <th id="column-address">
+                  Store Name
+              </th>
+
+              <th id="column">
+                Status 
+              </th>
+              <th id="last">
+              </th>
+            </tr>        
+          </table>
+
+          <div class="create-form">
+            <div class="actual-form-create">
+                <div class="view-form-header">
+                    View Transaction
+                </div>
+                <div id="addressform">  </div>
+                <table id="maintable-det">
+                  <tr id="tableheader">
+                    <th id="first">
+                     Product Name
+                    </th>
+                    <th id="column">
+                      Category 
+                  </th>
+                    <th id="column">
+                      Model 
+                  </th>
+                    <th id="last">
+                        Quantity 
+                    </th>
+                  </tr>        
+                </table>
+
+                <div class="cancelbutton" onclick="removeRows()"> Cancel</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

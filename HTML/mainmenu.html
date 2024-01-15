@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <script src="/js/mainmenu.js"></script>
+    <script src="/js/client.js"></script>
+    <link rel="stylesheet" href="/css/mainmenu.css">
+    <link rel="stylesheet" href="/css/client.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="header" colspan="2">
+        <div id="header-left"> 
+            <img class="logo" src = "/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+           
+        </div>
+
+        <div class="header-right">
+          
+          <a onclick="logOut();">Logout</a>
+          <a><i onclick="goCart();" id ="cart" class='bx bx-cart' ></i></a>
+            
+        </div>
+    </div>  
+
+      
+    <div class = "wrap1">
+        <div id ="new">
+        </div>
+    
+        <div id ="popular">          
+        </div>
+    </div>
+   
+    <br>
+    <div class = "wrap">
+        
+        <div onclick="catalogue();" class="item">
+            <ul class="lists" style="list-style-type:none">
+                <li id="icons"><i class='bx bxs-package'></i></li> 
+                <li>Catalogue</li> 
+            </ul>            
+        </div>
+        <div onclick="delivery();" class="item">
+            <ul class="lists" style="list-style-type:none">
+                <li id="icons"><i class='bx bxs-truck' ></i></li> 
+                <li>Delivery Progress</li> 
+            </ul>    
+
+        </div>
+        <div onclick="orderHistory();" class="item">
+            <ul class="lists" style="list-style-type:none">
+                <li id="icons"><i class='bx bx-history' ></i></li>
+                <li>Order History</li> 
+            </ul>    
+
+        </div>
+    </div>   
+</div>
+</body>
+</html>

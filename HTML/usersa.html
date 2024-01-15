@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <script src="/js/usersa.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/usersa.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+        <i class='bx bx-menu' onclick="openSidebar();" id="iconmenu"></i>
+        <div class = "createbutton" onclick="openCreate()"> Create User</div>
+    </div>
+
+
+
+    <div class="sidebar">
+
+        <ul id="dashboardlist" style="list-style-type:none">
+            <li class="lists" onclick="mainMenu();">
+                <i class='bx bxs-dashboard'></i> Dashboard
+            </li>
+            <li class="lists" onclick="orders();">
+                <i class='bx bx-cart'></i>
+                Orders
+            </li>
+            <li class="pageactive" >
+                <i class='bx bx-user'></i> Users
+
+            </li>
+            <li class="lists" onclick="transactions();">
+                <i class='bx bx-wallet-alt'></i> Transactions
+
+            <li class="lists" onclick="catalogue();">
+                <i class='bx bx-package'></i> Catalogue
+            </li>
+            <li class="lists" onclick="logOut();">
+                <i class='bx bx-log-out'></i> Logout
+            </li>
+        </ul>
+        <div class="profile">
+            profile
+        </div>
+    </div>
+
+    <div class="maincontent">
+        <div class="wrap">
+            
+            <div class="search">
+               <input onkeyup="filterListByNameOrEmail()" type="text" id="searchbar"class="searchTerm" placeholder="Search user by email or name">
+               <button type="submit" class="searchButton">
+                <i class='bx bx-search'></i>
+              </button>
+            </div>
+         </div>
+         <div class="filtermenu">
+            <div class="allfilters"> Status <select onchange="filterListByStatus()" id="status">
+                <option value=""> </option>
+                <option value="USER">USER</option>
+                <option value="ADMIN">ADMIN</option>
+                <option value="LOGISTICS">LOGISTICS</option>
+              </select>
+              Total Sales <select onchange="sortBySales()" id="amount">
+                <option value=""> </option>
+                <option value="Ascending">Ascending </option>
+                <option value="Descending">Descending</option>
+              </select>
+
+            </div>
+        </div>
+         <div class="userform">
+            
+         </div> 
+         <div class="tablecontainer">
+            <table id="maintable">
+                <tr id="tableheader">
+                  <th id="first">
+                    User ID
+                  </th>
+                  <th id="column">
+                      Status
+                  </th>
+                  <th id="column">
+                    Name
+                  </th>
+                  <th id="column">
+                    Total Sales
+                  </th>
+                  <th id="column">
+                    Email
+                  </th>
+                  <th id="last">
+                  </th>
+                </tr>        
+              </table>
+         </div>
+            
+
+              <div class="create-form">
+                <div class="actual-form-create">
+                    <div class="create-form-header">
+                        Create User
+                    </div>
+                    <ul style="list-style-type:none;" class="groupofforms">
+                        <input type="text" class="form" id="inputname" placeholder = "Enter fullname" ><br>
+                        <input type="text" class="form" id="inputemail" placeholder = "Enter email"  ><br>
+                        <input type="text" class="form" id="inputphone" placeholder = "Enter phone number"  ><br>
+                        <input type="text" class="form" id="inputaddress" placeholder = "Enter address"  ><br>
+                        <input type="text" class="form" id="inputstorename"placeholder = "Enter store name" ><br>
+                        <select  class="form" id="inputstatus">
+                            <option value="USER">User</option>
+                            <option value="ADMIN">Admin</option>
+                          </select>
+                        <div class="confirmbutton" onclick="confirm()"> Confirm</div>
+                    </ul>
+                    <div class="cancelbutton" onclick="remove()"> Cancel</div>
+                </div>
+            </div>
+
+            <div class="success">
+                <div class="actual-success">
+                    <ul style="list-style-type:none;" class="groupofforms">
+                        <i class='bx bx-check-circle' id = "cbutton"></i>
+                        <h3 id="senttext-success">Success! </h3>
+                        <p>You have created a new user.</p>
+                    </ul>
+                </div>
+            </div>
+
+    </div>
+
+</body>
+
+</html>

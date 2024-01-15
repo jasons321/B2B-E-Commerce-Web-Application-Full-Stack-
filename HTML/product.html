@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <script src="/js/product.js"></script>
+    <script src="/js/client.js"></script>
+    
+    <link rel="stylesheet" href="/css/product.css"> 
+    <link rel="stylesheet" href="/css/client.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <div class="header" colspan="2">
+    <img class="logo" src = "/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+    <div class="header-right">
+      <a class="active" onclick="home();" href="#home">Home</a>
+      
+      <a onclick="logOut();">Logout</a>
+      <a><i onclick="goCart();" id ="cart" class='bx bx-cart' ></i></a>
+        
+    </div>
+  </div>   
+    <div id = "maincontent"class="maincontent">
+     <div id="image">
+      <div class="imagebutton" onclick ="move(-1)" id="leftbutton"><i class='bx bxs-chevron-left' ></i></div>
+      <div class="imagebutton" id="rightbutton" onclick ="move(1)"><i class='bx bxs-chevron-right' ></i></div>
+     </div> 
+     <div id="payment">
+        <ul class="productdetails" style="list-style-type:none" style="line-height:1.4;">
+          <li id = "name"></li>
+          <li  id = "category"> </li>
+          <li id = "description"></li>
+          <li id = "price"> </li>
+          <li id = "stock"> </li>
+          <li id = "model"> Model type: 
+            <select id="modeltype" onchange="changeValues();" >
+            </select>
+          </li>
+          <li id = "quantity">Quantity: </li>
+          <li ><div onclick =  "addCart()"id="addtocart">Add to cart<div> </li>
+        </ul>
+      </div> 
+      <div class="success">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Success! </h3>
+                <p>You have added an item to your cart</p>
+            </ul>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

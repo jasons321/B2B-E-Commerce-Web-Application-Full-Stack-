@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/editcatalogue.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/editcatalogue.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Edit Cat</title>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+        <i class='bx bx-menu' onclick="openSidebar();" id="iconmenu"></i>
+        <div class="cornerbutton" onclick="saveChanges()">Confirm</div>
+    </div>
+
+
+    <div class="sidebar">
+
+        <ul id="dashboardlist" style="list-style-type:none">
+            <li class="lists" onclick="mainMenu();">
+                <i class='bx bxs-dashboard'></i> Dashboard
+            </li>
+            <li class="lists" onclick="orders();">
+                <i class='bx bx-cart'></i>
+                Orders
+            </li>
+            <li class="lists" onclick="users();">
+                <i class='bx bx-user'></i> Users
+
+            </li>
+            <li class="lists" onclick="transactions();">
+                <i class='bx bx-wallet-alt'></i> Transactions
+
+            <li class="lists" onclick="catalogue();">
+                <i class='bx bx-package'></i> Catalogue
+            </li>
+            <li class="lists" onclick="logOut();">
+                <i class='bx bx-log-out'></i> Logout
+            </li>
+        </ul>
+        <div class="profile">
+            profile
+        </div>
+    </div>
+    <div class="editform">
+        <div class="formheader">
+            Edit Catalogue
+        </div>
+        <div class="formgrid">
+            <div id="editinfo">
+                <div class ="rows"id="prodID"> Product ID:<br> </div> 
+                <div class ="rows"id="totalSales">Total Sale:<br> </div> 
+                <div class ="rows"id="dateAdded">Date Added:<br> </div> 
+                <div class ="rows" id="dateModified">Date Modified:<br></div> 
+            </div>
+            <div id="stats">
+                <div id="description">
+                    <ul id="desc" style="list-style-type:none">
+                        <li >Description </li>
+                    </ul>
+                </div>
+                <div id="name">
+                    <ul id="nameul" style="list-style-type:none">
+                        <li >Name </li>
+                    </ul>
+                </div>
+                <div id="category">
+                    <ul id="cat" style="list-style-type:none">
+                        <li >Category </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="imagesliders">
+               
+        <table id="varianttable">
+            <tr id="tableheader">
+              <th id="first">
+                Variant ID
+              </th>
+              <th id="column">
+                Model Name 
+            </th>
+              <th id="column">
+                  Quantity 
+              </th>
+              <th id="column">
+                Price
+              </th>
+
+              <th id="last">
+                <div class="addmodel" onclick="addMenu()">Add</div>
+              </th>
+            </tr>        
+          </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="actual-image-container" id="imageid">
+            <div  id="image-carousel">
+                <div class="imagebutton" id="leftbutton" onclick ="move(-1)" ><i class='bx bxs-chevron-left' ></i></div>
+                <div class="imagebutton" id="rightbutton" onclick ="move(1)"><i class='bx bxs-chevron-right' ></i></div>
+            </div>
+            <div id="returnbutton" onclick="closeContainer()">Return</div>
+            <input type="file" id="imagefile"accept="image/*"  name="profile-files" >
+
+        </div>
+    </div>
+
+    <div class="delete">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Deleted</h3>
+                <p>You have deleted a product.</p>
+            </ul>
+        </div>
+    </div>
+    <div class="editproduct">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Edited</h3>
+                <p>You have edited a product.</p>
+            </ul>
+        </div>
+    </div>
+    <div class="deletemodel">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Deleted</h3>
+                <p>You have deleted a model.</p>
+            </ul>
+        </div>
+    </div>
+    <div class="addedmodel">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Success! </h3>
+                <p>You have created a new model.</p>
+            </ul>
+        </div>
+    </div>
+    <div class="create-form">
+        <div class="actual-form-create">
+            <div class="create-form-header">
+                Adding Model
+            </div>
+            <ul style="list-style-type:none;" class="groupofforms">
+                <input type="text" class="form" id="inputmodel" placeholder = "Enter model type" ><br>
+                <input type="number" class="form" id="inputprice" placeholder = "Enter price"  ><br>
+                <input type="number" class="form" id="inputstock" placeholder = "Enter initial stock"  ><br>
+                <p>Upload Image</p><input type="file" id="myFile"accept="image/*"  name="profile-files" multiple="multiple">
+
+                <div class="confirmbutton" onclick="addModel()"> Confirm</div>
+            </ul>
+            <div class="cancelbutton" onclick="remove()"> Cancel</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <script src="/js/edituser.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/edituser.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+        <i class='bx bx-menu' onclick="openSidebar();" id="iconmenu"></i>
+        <div class="cornerbutton" onclick="updateUser()">Confirm</div>
+        <div class="deletebutton" onclick="deleteUser()">Delete</div>
+    </div>
+
+
+    <div class="sidebar">
+
+        <ul id="dashboardlist" style="list-style-type:none">
+            <li class="lists">
+                <i class='bx bxs-dashboard'></i> Dashboard
+            </li>
+            <li class="lists" onclick="orders();">
+                <i class='bx bx-cart'></i>
+                Orders
+            </li>
+            <li class="lists" onclick="users();">
+                <i class='bx bx-user'></i> Users
+
+            </li>
+            <li class="lists" onclick="transactions();">
+                <i class='bx bx-wallet-alt'></i> Transactions
+
+            <li class="lists" onclick="catalogue();">
+                <i class='bx bx-package'></i> Catalogue
+            </li>
+            <li class="lists" onclick="logOut();">
+                <i class='bx bx-log-out'></i> Logout
+            </li>
+        </ul>
+        <div class="profile">
+            profile
+        </div>
+    </div>
+
+    <div class="editform">
+        <div class="formheader">
+            <h3>Edit User</h3>
+        </div>
+        <div class="formgrid">
+            <div id="profilepic"></div>
+            <div id="idinfo"></div>
+            <div id="details">
+                <div id="status">
+                        <ul id ="statusul" style="list-style-type:none">
+                            <li class ="spacingbox"><b><p>Status</p></b> </li>
+                        </ul>                   
+                   
+                </div>
+                <div id="name">
+                    <ul id ="nameul" style="list-style-type:none">
+                        <li class ="spacingbox"><b><p >Name</p></b>  </li>
+                    </ul>
+                    
+                </div>
+                <div id="address">
+                    <ul id ="addressul" style="list-style-type:none">
+                        <li class ="spacingbox"><b><p >Address</p></b>  </li>
+                    </ul>
+                    
+                </div>
+                <div id="phonenum">
+                    <ul id ="phonenumul" style="list-style-type:none">
+                        <li class ="spacingbox"><b><p >Phone Number</p></b>  </li>
+                    </ul>
+
+                </div>
+                <div id="storename">
+                    <ul id ="storenameul" style="list-style-type:none">
+                        <li class ="spacingbox"><b><p >Store Name</p></b>  </li>
+                    </ul>
+                </div>
+                <div id="created">
+                    <ul id ="createdul" style="list-style-type:none">
+                        <li class ="spacingbox"><b><p >Created</p></b>  </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="activities">
+                <table id="activitiestable">
+            
+                    <tr id="activities-tableheader">
+                      <th id="first-order">
+                        Transaction ID
+                      </th>
+                      <th id="column">
+                        Status 
+                    </th>
+                      <th id="column">
+                        Date Ordered  
+                      </th>
+                      <th id="column">
+                        Total Value
+                      </th>
+        
+                      <th id="last-order">
+                      </th>
+                    </tr>        
+                  </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="success">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Success!</h3>
+                <p>You have edited a user.</p>
+            </ul>
+        </div>
+    </div>
+    <div class="delete">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Deleted</h3>
+                <p>You have deleted a user.</p>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

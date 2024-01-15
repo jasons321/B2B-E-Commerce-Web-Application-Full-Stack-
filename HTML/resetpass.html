@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <script src="/js/resetpass.js"></script>
+    <link rel="stylesheet" href="/css/resetpass.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="header" colspan="2">
+        <img class="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+    </div>
+    </div>
+    <div class="maincontainer">
+        <div class="text">
+            <h1 id="bigtext">Password Reset</h1>
+        </div>
+
+        <div class="form">
+            <ul class="list" style="list-style-type:none;">
+                <li>
+                    <p>Enter new password</p>
+                    <input class="passwordinput" id ="password1"type="password" placeholder="Enter your password">
+                </li>
+                <li>
+                    <p>Confirm new password</p>
+                    <input class="passwordinput" id ="password2" type="password" placeholder="Enter your password">
+                </li>
+                <li>
+                    <div class="button" onclick = "confirm();"> Confirm</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="success">
+        <div class="actual-success">
+            <ul style="list-style-type:none;" class="groupofforms">
+                <i class='bx bx-check-circle' id = "cbutton"></i>
+                <h3 id="senttext-success">Success! </h3>
+                <p>Check your email for a link to reset your password.</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="actualModal">
+            <ul style="list-style-type:none;" class="lists">
+                <li><i class='bx bx-x-circle' id="xbutton"></i></li>
+                <li><h5 id="modalText">Password doesn't match. Try Again.</h5></li>
+                <li><div id="returnbuttonw" onclick="back();">Return</div></li>
+              </ul>  
+        </div>
+    </div>
+
+
+</body>
+
+</html>

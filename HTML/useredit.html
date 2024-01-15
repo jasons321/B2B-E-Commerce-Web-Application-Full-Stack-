@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Information</title>
+        <script src="/js/useredit.js"></script>
+        <script src="/js/client.js"></script>
+
+        <link rel="stylesheet" href="/css/useredit.css">
+        <link rel="stylesheet" href="/css/client.css">
+    
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+<body>
+    <div class="header" colspan="2">
+        <img class="logo" src = "/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+        <div class="header-right">
+          <a onclick="home()">Home</a>
+          
+          <a onclick="logOut();">Logout</a>
+          <a><i onclick="goCart();" id ="cart" class='bx bx-cart' ></i></a>
+            
+        </div>
+    </div>  
+    <div class="maincontent" > 
+        <ul class="editformlist" style="list-style-type:none">
+            <li id="image">
+            </li>
+            <li id="name">
+                Name
+            </li>
+            <li id="storename">
+                Store Name
+            </li>
+            <li id="address">
+                Address
+            </li>
+            <li id="phonenum">
+                Phone number
+            </li>
+            <li id="email">
+                Email
+            </li>
+            <li>
+                <div class="confirmbutton" onclick="updateUser()"> Update </div>
+            </li>
+        </ul>
+        <div class="success">
+            <div class="actual-success">
+                <ul style="list-style-type:none;" class="groupofforms">
+                    <i class='bx bx-check-circle' id = "cbutton"></i>
+                    <h3 id="senttext-success">Success! </h3>
+                    <p>You have edited your information</p>
+                </ul>
+            </div>
+        </div>
+    </div>   
+</div>
+</html>

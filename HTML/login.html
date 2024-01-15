@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>CS IA</title>
+</head>
+
+<body>
+    <div class="container">
+        <img id="logo" src="/images/WhatsApp_Image_2021-12-21_at_21.15.14-removebg-preview.png">
+
+            <div class = "emailtext">
+                <div class="text">Email</div> <br>
+                <input type="text" id="email" placeholder="Enter your email">
+
+            </div>
+            <div class="passwordtext">
+                <div class="text">Password</div><br>
+                <input id="password" type="password" placeholder="Enter your password" id="password"> 
+                <div id="forgot" onclick="openForgot();">Forgot Password?</div>
+
+            </div>
+                <div id="loginbutton" onclick="login();"> Login</div>
+    </div>
+
+    <div class="forgot-password">
+        <div class="actual-forgot">
+            <h3 id="forgotText">Reset Password </h3><br>
+            Enter your email and we will send a link to reset your password!
+            <input id="reset" type="text" placeholder="Enter your email"><br>
+            <div id="confirmbutton" onclick="confirm();"> Confirm </div>
+            <div id="returnbuttonf" onclick="closeForgot();"> Return </div>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="actualModal">
+            <ul style="list-style-type:none;" class="lists">
+                <li><i class='bx bx-x-circle' id="xbutton"></i></li>
+                <li>
+                    <h5 id="modalText">Wrong password or email!</h5>
+                </li>
+                <li>
+                    <div id="returnbuttonw" onclick="back();">Return</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="email-not-found">
+        <div class="actualModal">
+            <ul style="list-style-type:none;" class="lists">
+                <li><i class='bx bx-x-circle' id="xbutton"></i></li>
+                <li>
+                    <h5 id="modalText">Email not found.</h5>
+                </li>
+                <li>
+                    <div id="returnbuttonw" onclick="closeNotfound();">Return</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="password-sent">
+        <div class="actual-sent">
+            <ul style="list-style-type:none;" class="lists">
+                <i class='bx bx-check-circle' id="cbutton"></i>
+                <h3 id="senttext-success">Success! </h3>
+                <p>Your new password has been set!</p>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
