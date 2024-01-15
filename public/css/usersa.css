@@ -1,0 +1,163 @@
+.pageactive{
+  margin-top: 15%;
+  background-color: #def2f1;
+  color: #17252a;
+  border-radius: 10px;
+  
+}
+
+@media screen and (max-width: 1600px) {
+  
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 20%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+
+   
+}
+@media screen and (max-width: 530px) {
+  
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 40%;
+      width: 90%;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:2px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:0.5%;
+    }
+}
+
+
+
+@media screen and (max-height: 600px) {
+
+
+  .lists{
+      margin-top:15%;
+  
+  }
+
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+
+    .pageactive{
+      margin-top: 15%;
+      background-color: #def2f1;
+      color: #17252a;
+      border-radius: 10px;
+      
+    }
+}
+
+@media screen and (max-height: 400px) {
+
+
+  .lists{
+      margin-top:10%;
+  
+  }
+
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 10px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+
+    .pageactive{
+      margin-top: 15%;
+      background-color: #def2f1;
+      color: #17252a;
+      border-radius: 10px;
+      
+    }
+}
+
+
+
+
+.tablecontainer{
+  width: 100%;
+  height:500px;
+  overflow-y: scroll;
+}
+
+
+.filtermenu{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height:50px;
+  line-height: 50px;
+}
+
+#filterbutton{
+  font-size: 35px;
+  position:absolute;
+  margin-top: 5px;
+  right:0;
+  margin-right: 5px;
+
+}
+
+select{
+  margin-right: 15px;;
+  width:16px;
+}
+
+.allfilters{
+  position: absolute;
+  left:25;
+}

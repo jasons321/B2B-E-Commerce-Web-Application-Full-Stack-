@@ -1,0 +1,172 @@
+
+
+  body{
+    padding:0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #def2f1;
+    font-family:Arial, Helvetica, sans-serif;
+    position: fixed;
+}
+
+
+
+html{
+    min-height: 100%;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+
+
+/* Style the header with a grey background and some padding */
+.header {
+    height:70px;
+    position:sticky;
+    background-color: rgb(143, 236, 205);
+    width: 100%;
+    min-width: 100%;
+  line-height: 70px;;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 50px;
+  
+    border-radius: 4px;
+    height:45px;
+  }
+  
+  
+  .header a:hover {
+    background-color: #ddd;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 50px;
+  
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  #header-left {
+    float: left;
+  }
+  
+  .logo{
+    height:80px;
+    line-height: 50px;
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+
+  
+  #cart{
+    margin-top: 8px;
+    font-size:30px;
+  
+  
+  }
+  
+
+  .success{
+    position:fixed;  
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .actual-success{
+    background-color: white;
+    width: 60%;
+    height: 280px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+
+  }
+
+  .groupofforms{
+    margin-top: 5%;
+    padding: 0;
+  }
+  
+  #cbutton{
+    color: rgb(50, 177, 50);
+    font-size: 100px;
+    margin-top: 20px;
+  }
+
+  #senttext-success{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .success-active{
+    visibility: visible;
+    opacity: 1;
+  }
+
+.search {
+  width: 90%;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.searchTerm {
+  width: 90%;
+  border: 3px solid #3aafa9;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #3aafa9;
+  background: #3aafa9;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}

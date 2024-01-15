@@ -1,0 +1,116 @@
+#header-log{
+    width:100%;
+    background-color: rgb(143, 236, 205);
+    height:70px;
+    position:relative;
+    text-align: center;
+  }
+
+
+.text-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#maintable-log{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    border-radius: 10px 10px 0px 0px;
+    background: #fff;
+    border-collapse: collapse;
+    text-align: center;
+    clear:both;
+}  
+
+#maintable-det{
+    
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    border-radius: 10px 10px 0px 0px;
+    background: #fff;
+    border-collapse: collapse;
+    text-align: center;
+} 
+
+.viewtransc{
+    width:80px;
+    height:30px;
+    font-size: 10px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .viewtransc:hover{
+    background-color: rgb(194, 44, 18);
+    width:80px;
+    height:30px;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #row-address{
+      overflow: hidden;
+  }
+
+  .view-form-header{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 3px solid black ;
+    height:40px;
+    line-height: 40px;
+  }
+
+  .update{
+    width:80px;
+    height:30px;
+    font-size: 10px;
+    background-color: rgb(115, 255, 0);
+    color: white;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .update:hover{
+    background-color: rgb(42, 160, 18);
+    width:80px;
+    height:30px;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #addressform{
+      overflow:auto;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid black;
+      margin-top: 20px;
+      height: 70px;
+      width: 90%;
+  }

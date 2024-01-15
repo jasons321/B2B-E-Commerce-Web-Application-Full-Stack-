@@ -1,0 +1,74 @@
+
+
+.maincontent{
+    width:100%;
+    height:100vh;
+    display:flex; 
+    overflow: scroll;
+    gap:5px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    display:wrap; 
+    overflow:auto;
+    margin-bottom: 20px;
+
+  }
+
+.editformlist{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding:0;
+    line-height:60px;
+}
+
+.profilepic{
+    height:230px;
+    width:230px;
+    border-radius: 50%;
+}
+
+.confirmbutton{
+    width: 80px;
+    height:30px;
+    background-color: rgb(66, 133, 233);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    color:white;
+    border-radius: 10px;
+}
+
+.confirmbutton:hover{
+    width: 80px;
+    height:30px;
+    background-color: rgb(46, 119, 230);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    color:white;
+    border-radius: 10px;
+}
+
+.uploadbutton{
+    width: 80px;
+    height:30px;
+    background-color: rgb(66, 133, 233);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    color:white;
+    border-radius: 10px;
+}
+
+
+.uploadbutton:hover{
+    width: 80px;
+    height:30px;
+    background-color: rgb(46, 119, 230);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    color:white;
+    border-radius: 10px;
+}

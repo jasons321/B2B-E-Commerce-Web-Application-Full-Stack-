@@ -1,0 +1,580 @@
+
+body{
+    padding:0px;
+    margin: 0px;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #def2f1;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+  }
+
+#header{
+  width:100%;
+  background-color: rgb(143, 236, 205);
+  height:70px;
+  position:relative;
+  line-height: 70px;
+
+}
+
+#iconmenu{
+  position: absolute;
+  font-size: 2em;
+  margin-left: 15px;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+#logo{
+  height:80px;
+  margin-left: 15px;
+  line-height: 50px;
+  width: 80px;
+}
+
+
+
+.sidebar{
+  background-color: #17252a;
+  height: 100%;
+  width: 10%;
+  padding:15px;
+  color:white;
+  z-index: 2;
+  display:none;
+
+}
+
+.sidebar.active{
+    position:fixed;
+  display: block;
+  z-index: 2;
+}
+
+#dashboardlist{
+  margin-top: 0;
+  padding-left: 0;
+  
+  height:20px;
+}
+
+
+.lists{
+  margin-top: 50px;
+
+}
+
+
+.sidebar ul li i{
+  margin-right: 15px;
+}
+
+.sidebar ul li{
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.sidebar ul li:hover{
+  background-color: #def2f1;
+  color: #17252a;
+  border-radius: 10px;
+}
+
+.profile{
+  position: absolute;
+  bottom:0;
+  margin-bottom: 20px;
+}
+
+.maincontent{
+  height:100%;
+  width: 100%; 
+  background-color:#def2f1;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 1600px) {
+  
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 20%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+
+}
+@media screen and (max-width: 530px) {
+  
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 40%;
+      width: 90%;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:2px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:0.5%;
+    }
+}
+
+
+
+@media screen and (max-height: 600px) {
+
+
+  .lists{
+      margin-top:15%;
+  
+  }
+
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+}
+
+@media screen and (max-height: 400px) {
+
+
+  .lists{
+      margin-top:10%;
+  
+  }
+
+  .sidebar ul li{
+      height: 30px;
+      line-height: 30px;
+      font-size: 10px;
+  }
+
+  .sidebar{
+      background-color: #17252a;
+      height: 100%;
+      width: 25%;
+      padding:15px;
+      color:white;
+      display: none;
+      z-index: 2;
+      display:none;
+      padding:5px;
+
+    }
+}
+
+
+ /* success popup structure*/
+
+ .success{
+    position:fixed;  
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .actual-success{
+    background-color: white;
+    width: 60%;
+    height: 280px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+
+  }
+
+  .delete{
+    position:fixed;  
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .actual-delete{
+    background-color: white;
+    width: 60%;
+    height: 280px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+
+  }
+  
+  
+  #cbutton{
+    color: rgb(50, 177, 50);
+    font-size: 100px;
+    margin-top: 20px;
+  }
+  
+  
+  #senttext-success{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .success-active{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .groupofforms{
+    margin-top: 5%;
+    padding: 0;
+  }
+  
+  /*searchbar: https://codepen.io/huange/pen/rbqsD*/
+
+.search {
+    width: 90%;
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+  }
+  
+  .searchTerm {
+    width: 90%;
+    border: 3px solid #3aafa9;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #000000;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #3aafa9;
+    background: #3aafa9;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+/* Table Format*/
+
+#maintable{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border-radius: 10px 10px 0px 0px;
+  background: #fff;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#tableheader{
+  background-color: #3aafa9;
+
+}
+
+#first{
+  border-radius: 10px 0px 0px 0px;
+  height:35px;
+  border-bottom: 10px black;
+
+}
+
+tr{
+  border-bottom: 3px solid black;
+  height:50px;
+}
+
+#last{
+  border-radius: 0px 10px 0px 0px;
+  height:35px;
+  width:15%;
+}
+
+
+/* Button Formats*/
+
+.viewbutton{
+  width:85px;
+  height:30px;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.viewbutton:hover{
+  width:85px;
+  height:30px;
+  background-color: rgb(48, 194, 18);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.createbutton{
+  float:right;
+  margin-top: 25px;
+  line-height: 30px;
+  margin-right: 20px;
+  height: 30px;
+  background-color: rgb(52, 88, 252);
+  color: white;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.createbutton:hover{
+  float:right;
+  margin-top: 25px;
+  line-height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+
+  margin-right: 20px;
+  height: 30px;
+  background-color: rgb(52, 252, 85);
+  color: white;
+
+}
+
+.cornerbutton{
+  float:right;
+  width:70px;
+  line-height: 25px;
+  height:25px;
+  text-align: center;
+  background-color:rgb(55, 103, 207);
+  border-radius: 10px;
+  color: white;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.cornerbutton:hover{
+  float:right;
+  width:70px;
+  line-height: 25px;
+  height:25px;
+  text-align: center;
+  background-color:rgb(77, 206, 73);
+  border-radius: 10px;
+  color: white;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.deletebutton{
+  float:right;
+  width:70px;
+  line-height: 25px;
+  height:25px;
+  text-align: center;
+  background-color:rgb(207, 60, 55);
+  border-radius: 10px;
+  color: white;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.deletebutton:hover{
+  float:right;
+  width:70px;
+  line-height: 25px;
+  height:25px;
+  text-align: center;
+  background-color:rgb(199, 110, 107);
+  border-radius: 10px;
+  color: white;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+
+/* Popup to add*/
+
+
+.create-form-header{
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid black ;
+  height:40px;
+  line-height: 40px;
+}
+
+
+.create-form{
+  position:fixed;  
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.create-form-active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.actual-form-create{
+  background-color: white;
+  width: 85%;
+  height: 85%;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.groupofforms{
+  text-align: center;
+  margin: 0;
+  padding-left: 0;
+}
+
+
+.form{
+  height: 50px;
+  margin-top: 20px;
+  width: 80%;
+}
+
+
+.confirmbutton{
+  height: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: rgb(54, 212, 62);
+  color:white;
+  border-radius:10px;
+  line-height: 40px;
+}
+.confirmbutton:hover{
+  height: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: rgb(212, 72, 54);
+  color:white;
+  border-radius:10px;
+  line-height: 40px;
+}
+
+.cancelbutton{
+  height: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  color:white;
+  border-radius:10px;
+  line-height: 40px;
+  background-color: rgb(212, 54, 54);
+ 
+}
+.cancelbutton:hover{
+  height: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  color:white;
+  border-radius:10px;
+  line-height: 40px;
+  background-color: rgb(238, 178, 88);
+
+}
+
+.filtermenu{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height:50px;
+  line-height: 50px;
+}
+
+select{
+  margin-right: 15px;;
+  width:16px;
+}

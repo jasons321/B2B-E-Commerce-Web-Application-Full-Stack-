@@ -1,0 +1,150 @@
+.acceptbutton{
+  width:85px;
+  height:30px;
+  background-color: rgb(102, 255, 0);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.acceptbutton:hover{
+
+  background-color: rgb(90, 219, 3);
+
+}
+
+.rejectbutton{
+  width:85px;
+  height:30px;
+  background-color: rgb(243, 61, 6);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.rejectbutton:hover{
+  background-color: rgb(197, 52, 8);
+
+}
+
+.viewimage{
+  width:85px;
+  height:30px;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: auto;
+  margin-left:auto;
+}
+
+.viewimage:hover{
+  width:85px;
+  height:30px;
+  background-color: rgb(48, 194, 18);
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.allimages{
+  width: 400px;
+  height: 400px;
+}
+
+input{
+  width:30px;
+
+}
+
+
+.modal-container{
+  position:fixed; 
+  height: 100vh;
+
+  width: 100%;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.actualModal{
+  overflow: auto;
+  position:fixed; 
+  background-color: white;
+  width: 80%;
+  height: 70%;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+}
+
+.transcdet{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  margin-bottom: 40px;
+  border-radius:10px;
+}
+
+#table-list{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#retbutton{
+  width: 100%;
+  height:30px;
+  position: absolute;
+  bottom:0;
+  background-color: blue;
+  color:white;
+  line-height: 30px;
+}
+
+#retbutton:hover{
+  background-color: rgb(0, 255, 255);
+
+}
+
+tr{
+  border-bottom: 3px solid black;
+  height:50px;
+}
+
+
+#first{
+  border-radius: 10px 0px 0px 0px;
+  height:35px;
+  border-bottom: 10px black;
+
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#table-list {
+  border-bottom: 3px solid black;
+}
+
+.tablecontainer{
+  height:200px;
+  overflow:auto; 
+}
