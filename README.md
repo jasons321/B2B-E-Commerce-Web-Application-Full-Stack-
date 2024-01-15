@@ -9,7 +9,8 @@ Some of the features included:
 - Full authentication and authorisation system, utilising JWT token
 - emailing system for invoice + automatic invoice generation
 
-A full demonstration video of the web appliction can be found in the file titled: "demonstration"
+A full demonstration video of the web appliction can be found by the video below: 
+[![Demonstration Video](http://img.youtube.com/vi/Qqt8lYCBESA/0.jpg)](https://www.youtube.com/watch?v=Qqt8lYCBESA)
 
 ## Design 
 
